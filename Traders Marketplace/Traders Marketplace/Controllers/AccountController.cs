@@ -6,6 +6,11 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using Traders_Marketplace.Models;
+using BusinessLogic;
+using Common;
+using System.Collections;
+using DataAccess;
+
 
 namespace Traders_Marketplace.Controllers
 {
@@ -75,24 +80,28 @@ namespace Traders_Marketplace.Controllers
         [HttpPost]
         public ActionResult Register(RegisterModel model)
         {
-            if (ModelState.IsValid)
-            {
-                // Attempt to register the user
-                MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.UserName, model.Password, model.Email, null, null, true, null, out createStatus);
 
-                if (createStatus == MembershipCreateStatus.Success)
-                {
-                    FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    ModelState.AddModelError("", ErrorCodeToString(createStatus));
-                }
+            if (new UsersRepository().CheckIfEmailExists(model.Email) == null)
+            {
+
+                new UsersBL().Register(model.Email, model.Password, model.FirstName, model.LastName, model.Address, model.SelectedTown, model.ContactNo, model.SelectedRole);//register a new user
+
+                // If we got this far, something failed, redisplay form
+                return RedirectToAction("Index", "Home");//back to home page
             }
 
-            // If we got this far, something failed, redisplay form
+            else
+            {
+                foreach (var modelValue in ModelState.Values)
+                {
+                    modelValue.Errors.Clear();
+                }
+                ModelState.AddModelError("Email", "Email address already exists. Please enter a different email address.");
+            }
+            
+               
+                
+            
             return View(model);
         }
 

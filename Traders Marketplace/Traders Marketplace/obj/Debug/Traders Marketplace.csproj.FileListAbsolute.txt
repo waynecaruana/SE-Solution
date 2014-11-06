@@ -7,3 +7,7 @@ C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\E
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\obj\Debug\Traders Marketplace.csprojResolveAssemblyReference.cache
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\obj\Debug\Traders Marketplace.dll
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\obj\Debug\Traders Marketplace.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\BusinessLogic.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\DataAccess.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\BusinessLogic.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\DataAccess.pdb

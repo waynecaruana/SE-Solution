@@ -45,8 +45,30 @@ namespace Traders_Marketplace.Models
     public class RegisterModel
     {
         [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
+        [Display(Name = "Name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Surname")]
+        public string LastName { get; set; }
+
+        [Required]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+
+        [Required]
+        [Display(Name = "Town")]
+        public IEnumerable<SelectListItem> Towns { get; set; }
+        public int SelectedTown { get; set; }
+
+        [Required]
+        [Display(Name = "Account Type")]
+        public IEnumerable<SelectListItem> Roles { get; set; }
+        public int SelectedRole { get; set; }
+
+        [Required]
+        [Display(Name = "Contact No")]
+        public string ContactNo { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]

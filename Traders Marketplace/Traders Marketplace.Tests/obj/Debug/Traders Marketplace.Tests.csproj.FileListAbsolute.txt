@@ -8,3 +8,7 @@ C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\obj\Debug\Traders Marketplace.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\obj\Debug\Traders Marketplace.Tests.dll
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\obj\Debug\Traders Marketplace.Tests.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\BusinessLogic.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\DataAccess.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\BusinessLogic.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\DataAccess.pdb
