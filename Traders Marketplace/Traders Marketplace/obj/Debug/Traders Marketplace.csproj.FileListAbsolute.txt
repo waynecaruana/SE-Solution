@@ -1,0 +1,9 @@
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\Traders Marketplace.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\Traders Marketplace.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\Common.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\EntityFramework.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\Common.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\EntityFramework.xml
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\obj\Debug\Traders Marketplace.csprojResolveAssemblyReference.cache
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\obj\Debug\Traders Marketplace.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\obj\Debug\Traders Marketplace.pdb

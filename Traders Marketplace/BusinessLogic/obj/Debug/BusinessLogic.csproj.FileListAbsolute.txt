@@ -1,0 +1,9 @@
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\Common.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\Common.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\obj\Debug\BusinessLogic.pdb

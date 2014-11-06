@@ -1,0 +1,10 @@
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\Traders Marketplace.Tests.dll.config
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\Traders Marketplace.Tests.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\Traders Marketplace.Tests.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\Traders Marketplace.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\Common.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\Traders Marketplace.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\bin\Debug\Common.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\obj\Debug\Traders Marketplace.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\obj\Debug\Traders Marketplace.Tests.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\obj\Debug\Traders Marketplace.Tests.pdb
