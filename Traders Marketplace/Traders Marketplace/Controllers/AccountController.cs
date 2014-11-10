@@ -19,7 +19,7 @@ namespace Traders_Marketplace.Controllers
 
         //
         // GET: /Account/LogOn
-
+        
         public ActionResult LogOn()
         {
             return View();
@@ -33,18 +33,13 @@ namespace Traders_Marketplace.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
+                if (new UsersBL().AuthenticateUserByUsernameAndPassword(model.Email,model.Password) != null)
                 {
-                    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                    {
-                        return Redirect(returnUrl);
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
+                    
+                    FormsAuthentication.SetAuthCookie(model.Email,true);
+
+                    return RedirectToAction("Index", "Home");
+                    
                 }
                 else
                 {

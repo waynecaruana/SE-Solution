@@ -90,5 +90,68 @@ namespace DataAccess
 
         }
 
+        /// <summary>
+        /// this method will check if user exists in order to login
+        /// </summary>
+        /// <param name="username">email</param>
+        /// <param name="password">password</param>
+        /// <returns>null or a user</returns>
+        public User AuthenticateUserByUsernameAndPassword(string email, string password)
+        {
+            return Entity.Users.SingleOrDefault(x => x.Email == email && x.Password == password);
+
+        }
+
+        /// <summary>
+        /// this will get user by email
+        /// </summary>
+        /// <param name="email">user email</param>
+        /// <returns>a user</returns>
+        public User GetUserByUsername(string email)
+        {
+            return Entity.Users.SingleOrDefault(x => x.Email == email);
+        }
+
+
+        /// <summary>
+        /// this allow us to get all roles for a user
+        /// </summary>
+        /// <param name="username">user email</param>
+        /// <returns>a list of roles</returns>
+        public IEnumerable<Role> GetUserRoles(string email)
+        {
+
+            User u = GetUserByUsername(email);//get user
+            return u.Roles.ToList();//get the list of users
+        }
+
+
+        /// <summary>
+        /// this method will give a list of permissions for a user
+        /// </summary>
+        /// <param name="email">user email</param>
+        /// <returns>a list of permissions</returns>
+        public IEnumerable<Permission> GetUserPermissions(string email)
+        {
+
+            User u = GetUserByUsername(email);//get user
+            List<Role> roles = u.Roles.ToList();//get the list of users
+
+            List<Permission> permissions =  new List<Permission>();
+            foreach (Role r in roles)
+            {
+                foreach (Permission p in r.Permissions)
+                {
+                    permissions.Add(p);
+                }
+            }
+
+            return permissions;
+        }
+
+
+
+       
+
     }
 }

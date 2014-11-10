@@ -12,6 +12,16 @@
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
+    <EntitySet Name="Permissions" EntityType="TradersMarketplaceDBModel.Permission" />
+    <EntitySet Name="Products" EntityType="TradersMarketplaceDBModel.Product" />
+    <AssociationSet Name="FK_Products_Users" Association="TradersMarketplaceDBModel.FK_Products_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="RolePermissions" Association="TradersMarketplaceDBModel.RolePermissions">
+      <End Role="Permission" EntitySet="Permissions" />
+      <End Role="Role" EntitySet="Roles" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Role">
     <Key>
@@ -20,6 +30,7 @@
     <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Role1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="Users" Relationship="TradersMarketplaceDBModel.UserRoles" FromRole="Roles" ToRole="Users" />
+    <NavigationProperty Name="Permissions" Relationship="TradersMarketplaceDBModel.RolePermissions" FromRole="Role" ToRole="Permission" />
   </EntityType>
   <EntityType Name="Town">
     <Key>
@@ -42,6 +53,7 @@
     <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="Town" Relationship="TradersMarketplaceDBModel.FK_Users_Towns" FromRole="Users" ToRole="Towns" />
     <NavigationProperty Name="Roles" Relationship="TradersMarketplaceDBModel.UserRoles" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="Products" Relationship="TradersMarketplaceDBModel.FK_Products_Users" FromRole="User" ToRole="Product" />
   </EntityType>
   <Association Name="FK_Users_Towns">
     <End Role="Towns" Type="TradersMarketplaceDBModel.Town" Multiplicity="0..1" />
@@ -58,5 +70,44 @@
   <Association Name="UserRoles">
     <End Role="Roles" Type="TradersMarketplaceDBModel.Role" Multiplicity="*" />
     <End Role="Users" Type="TradersMarketplaceDBModel.User" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Permission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Roles" Relationship="TradersMarketplaceDBModel.RolePermissions" FromRole="Permission" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ImagePath" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Stock" />
+    <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="DateListed" />
+    <Property Type="String" Name="UserEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="TradersMarketplaceDBModel.FK_Products_Users" FromRole="Product" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_Products_Users">
+    <End Type="TradersMarketplaceDBModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="TradersMarketplaceDBModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Email" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="UserEmail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RolePermissions">
+    <End Type="TradersMarketplaceDBModel.Permission" Role="Permission" Multiplicity="*" />
+    <End Type="TradersMarketplaceDBModel.Role" Role="Role" Multiplicity="*" />
   </Association>
 </Schema>

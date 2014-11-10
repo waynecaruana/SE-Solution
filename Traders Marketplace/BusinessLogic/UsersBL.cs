@@ -82,5 +82,39 @@ namespace BusinessLogic
   
 
         }
+
+        /// <summary>
+        /// This email us used for login
+        /// </summary>
+        /// <param name="email">email</param>
+        /// <param name="password">password</param>
+        /// <returns>a user or null if does not exist</returns>
+        public User AuthenticateUserByUsernameAndPassword(string email, string password)
+        {
+            return new UsersRepository().AuthenticateUserByUsernameAndPassword(email, password);
+        }
+
+        /// <summary>
+        /// this method allow us to get all user roles
+        /// </summary>
+        /// <param name="email">user email</param>
+        /// <returns>a list of roles</returns>
+        public IEnumerable<Role> GetUserRoles(string email)
+        {
+            return new UsersRepository().GetUserRoles(email);
+        }
+
+
+        /// <summary>
+        /// This email will return a list of permissions based on a user email  
+        /// </summary>
+        /// <param name="email">user email address</param>
+        /// <returns>a list of permissions</returns>
+        public IEnumerable<Permission> GetUserPermissions(string email)
+        {
+
+            return new UsersRepository().GetUserPermissions(email);
+        }
+
     }
 }

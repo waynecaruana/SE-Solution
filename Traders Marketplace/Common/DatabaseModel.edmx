@@ -4,12 +4,27 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TradersMarketplaceDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="TradersMarketplaceDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="TradersMarketplaceDBModelStoreContainer">
+          <EntitySet Name="Permissions" EntityType="TradersMarketplaceDBModel.Store.Permissions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Products" EntityType="TradersMarketplaceDBModel.Store.Products" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RolePermissions" EntityType="TradersMarketplaceDBModel.Store.RolePermissions" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Roles" EntityType="TradersMarketplaceDBModel.Store.Roles" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Towns" EntityType="TradersMarketplaceDBModel.Store.Towns" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="UserRoles" EntityType="TradersMarketplaceDBModel.Store.UserRoles" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Users" EntityType="TradersMarketplaceDBModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Products_Users" Association="TradersMarketplaceDBModel.Store.FK_Products_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolePermissions_Permissions" Association="TradersMarketplaceDBModel.Store.FK_RolePermissions_Permissions">
+            <End Role="Permissions" EntitySet="Permissions" />
+            <End Role="RolePermissions" EntitySet="RolePermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RolePermissions_Roles" Association="TradersMarketplaceDBModel.Store.FK_RolePermissions_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="RolePermissions" EntitySet="RolePermissions" />
+          </AssociationSet>
           <AssociationSet Name="FK_UserRoles_Roles" Association="TradersMarketplaceDBModel.Store.FK_UserRoles_Roles">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="UserRoles" EntitySet="UserRoles" />
@@ -23,6 +38,35 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Permissions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="300" />
+          <Property Name="ImagePath" Type="varchar" MaxLength="50" />
+          <Property Name="Stock" Type="int" />
+          <Property Name="Price" Type="decimal" Scale="2" />
+          <Property Name="DateListed" Type="date" />
+          <Property Name="UserEmail" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="RolePermissions">
+          <Key>
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="PermissionID" />
+          </Key>
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="PermissionID" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Roles">
           <Key>
             <PropertyRef Name="RoleID" />
@@ -57,6 +101,42 @@
           <Property Name="TownID" Type="int" />
           <Property Name="ContactNo" Type="varchar" MaxLength="50" />
         </EntityType>
+        <Association Name="FK_Products_Users">
+          <End Role="Users" Type="TradersMarketplaceDBModel.Store.Users" Multiplicity="0..1" />
+          <End Role="Products" Type="TradersMarketplaceDBModel.Store.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Email" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="UserEmail" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolePermissions_Permissions">
+          <End Role="Permissions" Type="TradersMarketplaceDBModel.Store.Permissions" Multiplicity="1" />
+          <End Role="RolePermissions" Type="TradersMarketplaceDBModel.Store.RolePermissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permissions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="RolePermissions">
+              <PropertyRef Name="PermissionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RolePermissions_Roles">
+          <End Role="Roles" Type="TradersMarketplaceDBModel.Store.Roles" Multiplicity="1" />
+          <End Role="RolePermissions" Type="TradersMarketplaceDBModel.Store.RolePermissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="RolePermissions">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_UserRoles_Roles">
           <End Role="Roles" Type="TradersMarketplaceDBModel.Store.Roles" Multiplicity="1" />
           <End Role="UserRoles" Type="TradersMarketplaceDBModel.Store.UserRoles" Multiplicity="*" />
@@ -93,8 +173,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TradersMarketplaceDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -110,6 +189,16 @@
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="Permissions" EntityType="TradersMarketplaceDBModel.Permission" />
+          <EntitySet Name="Products" EntityType="TradersMarketplaceDBModel.Product" />
+          <AssociationSet Name="FK_Products_Users" Association="TradersMarketplaceDBModel.FK_Products_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="RolePermissions" Association="TradersMarketplaceDBModel.RolePermissions">
+            <End Role="Permission" EntitySet="Permissions" />
+            <End Role="Role" EntitySet="Roles" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Role">
           <Key>
@@ -118,6 +207,7 @@
           <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Role1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Users" Relationship="TradersMarketplaceDBModel.UserRoles" FromRole="Roles" ToRole="Users" />
+          <NavigationProperty Name="Permissions" Relationship="TradersMarketplaceDBModel.RolePermissions" FromRole="Role" ToRole="Permission" />
         </EntityType>
         <EntityType Name="Town">
           <Key>
@@ -140,6 +230,7 @@
           <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Town" Relationship="TradersMarketplaceDBModel.FK_Users_Towns" FromRole="Users" ToRole="Towns" />
           <NavigationProperty Name="Roles" Relationship="TradersMarketplaceDBModel.UserRoles" FromRole="Users" ToRole="Roles" />
+          <NavigationProperty Name="Products" Relationship="TradersMarketplaceDBModel.FK_Products_Users" FromRole="User" ToRole="Product" />
         </EntityType>
         <Association Name="FK_Users_Towns">
           <End Role="Towns" Type="TradersMarketplaceDBModel.Town" Multiplicity="0..1" />
@@ -156,6 +247,45 @@
         <Association Name="UserRoles">
           <End Role="Roles" Type="TradersMarketplaceDBModel.Role" Multiplicity="*" />
           <End Role="Users" Type="TradersMarketplaceDBModel.User" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Roles" Relationship="TradersMarketplaceDBModel.RolePermissions" FromRole="Permission" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ImagePath" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Stock" />
+          <Property Type="Decimal" Name="Price" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="DateListed" />
+          <Property Type="String" Name="UserEmail" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="User" Relationship="TradersMarketplaceDBModel.FK_Products_Users" FromRole="Product" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_Products_Users">
+          <End Type="TradersMarketplaceDBModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="TradersMarketplaceDBModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Email" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="UserEmail" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="RolePermissions">
+          <End Type="TradersMarketplaceDBModel.Permission" Role="Permission" Multiplicity="*" />
+          <End Type="TradersMarketplaceDBModel.Role" Role="Role" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -200,6 +330,37 @@
               <ScalarProperty Name="Email" ColumnName="Email" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="Permissions">
+            <EntityTypeMapping TypeName="TradersMarketplaceDBModel.Permission">
+              <MappingFragment StoreEntitySet="Permissions">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="TradersMarketplaceDBModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="RolePermissions" TypeName="TradersMarketplaceDBModel.RolePermissions" StoreEntitySet="RolePermissions">
+            <EndProperty Name="Role">
+              <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+            </EndProperty>
+            <EndProperty Name="Permission">
+              <ScalarProperty Name="ID" ColumnName="PermissionID" />
+            </EndProperty>
+          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -222,16 +383,25 @@
     <Diagrams>
       <Diagram Name="DatabaseModel" ZoomLevel="65">
         <EntityTypeShape EntityType="TradersMarketplaceDBModel.Role" Width="1.5" PointX="0.75" PointY="1.5" Height="1.5956835937500002" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradersMarketplaceDBModel.Town" Width="1.5" PointX="0.75" PointY="5.5" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradersMarketplaceDBModel.Town" Width="1.5" PointX="7.625" PointY="0.875" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="TradersMarketplaceDBModel.User" Width="1.5" PointX="3" PointY="1" Height="2.7494921874999996" IsExpanded="true" />
         <AssociationConnector Association="TradersMarketplaceDBModel.FK_Users_Towns" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="6.297841796875" />
-          <ConnectorPoint PointX="3.75" PointY="6.297841796875" />
-          <ConnectorPoint PointX="3.75" PointY="3.7494921874999996" />
+          <ConnectorPoint PointX="7.625" PointY="1.03125" />
+          <ConnectorPoint PointX="4.5" PointY="1.03125" />
         </AssociationConnector>
         <AssociationConnector Association="TradersMarketplaceDBModel.UserRoles" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="2.2978417968750002" />
-          <ConnectorPoint PointX="3" PointY="2.2978417968750002" />
+          <ConnectorPoint PointX="2.25" PointY="2.3939925130208328" />
+          <ConnectorPoint PointX="3" PointY="2.3939925130208328" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TradersMarketplaceDBModel.Permission" Width="1.5" PointX="1.25" PointY="3.625" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="TradersMarketplaceDBModel.Product" Width="1.5" PointX="5.25" PointY="1.125" Height="2.7494921874999996" />
+        <AssociationConnector Association="TradersMarketplaceDBModel.FK_Products_Users" >
+          <ConnectorPoint PointX="4.5" PointY="2.49974609375" />
+          <ConnectorPoint PointX="5.25" PointY="2.49974609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="TradersMarketplaceDBModel.RolePermissions" >
+          <ConnectorPoint PointX="2.03272025137126" PointY="3.625" />
+          <ConnectorPoint PointX="2.03272025137126" PointY="3.2879850260416661" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

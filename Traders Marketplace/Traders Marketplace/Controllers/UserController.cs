@@ -10,10 +10,11 @@ namespace Traders_Marketplace.Controllers
     public class UserController : Controller
     {
         //
-        // GET: /User/
-
+        // GET: /User
+        [Authorize(Roles = "List Users")]
         public ActionResult Index()
         {
+           
             var entities = new TradersMarketplaceDBEntities();
 
             return View(entities.Users.ToList());

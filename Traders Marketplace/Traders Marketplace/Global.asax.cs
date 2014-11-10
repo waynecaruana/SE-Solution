@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Security;
+using System.Security.Principal;
+using Common;
+using BusinessLogic;
 
 namespace Traders_Marketplace
 {
@@ -35,6 +39,27 @@ namespace Traders_Marketplace
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
         }
+
+        protected void Application_AuthenticateRequest(object sender, EventArgs args)
+        {
+            if (Context.User != null)
+            {
+                IEnumerable<Permission> persmissions = new UsersBL().GetUserPermissions(Context.User.Identity.Name);
+
+
+                string[] permissionArray = new string[persmissions.Count()];
+                for (int i = 0; i < persmissions.Count(); i++)
+                {
+                    permissionArray[i] = persmissions.ElementAt(i).Name;
+                }
+
+                GenericPrincipal gp = new GenericPrincipal(Context.User.Identity, permissionArray);
+                Context.User = gp;
+            }
+        }
+
+        
     }
 }
