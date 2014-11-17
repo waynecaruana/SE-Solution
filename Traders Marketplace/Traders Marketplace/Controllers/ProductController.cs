@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Common;
+using BusinessLogic;
+using Traders_Marketplace.Models;
+using System.IO;
+using System.Web.UI.WebControls;
 
 namespace Traders_Marketplace.Controllers
 {
-    public class UserController : Controller
+    public class ProductController : Controller
     {
         //
-        // GET: /User
-        [Authorize(Roles = "List Users")]
+        // GET: /Product/
+
         public ActionResult Index()
         {
-           
-            var entities = new TradersMarketplaceDBEntities();
-
-            return View(entities.Users.ToList());
-            
+            var products = new ProductsBL().GetAllProducts();
+            return View(products);
         }
 
         //
-        // GET: /User/Details/5
+        // GET: /Product/Details/5
 
         public ActionResult Details(int id)
         {
@@ -30,7 +30,7 @@ namespace Traders_Marketplace.Controllers
         }
 
         //
-        // GET: /User/Create
+        // GET: /Product/Create
 
         public ActionResult Create()
         {
@@ -38,25 +38,43 @@ namespace Traders_Marketplace.Controllers
         } 
 
         //
-        // POST: /User/Create
+        // POST: /Product/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(ProductModel model)
         {
+
+            HttpPostedFileBase file = Request.Files[0];
+            byte[] imageSize = new byte[file.ContentLength];
+            file.InputStream.Read(imageSize, 0, (int)file.ContentLength);
+            string image = file.FileName.Split('\\').Last();
+            int size = file.ContentLength;
+
+            if (size > 0)
+            {
+                file.SaveAs(Server.MapPath("~/Content/images/" + image.ToString()));
+                //Save image url to database
+            }
+            else
+            {
+                image = "na.jpg";
+            }
+
             try
             {
-                // TODO: Add insert logic here
+                new ProductsBL().AddProduct(model.Name, model.Desc, "/Content/Images/"+image.ToString(), model.Stock, model.Price, model.Email);
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception e)
             {
+                string ex = e.Message;
                 return View();
             }
         }
         
         //
-        // GET: /User/Edit/5
+        // GET: /Product/Edit/5
  
         public ActionResult Edit(int id)
         {
@@ -64,7 +82,7 @@ namespace Traders_Marketplace.Controllers
         }
 
         //
-        // POST: /User/Edit/5
+        // POST: /Product/Edit/5
 
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
@@ -82,7 +100,7 @@ namespace Traders_Marketplace.Controllers
         }
 
         //
-        // GET: /User/Delete/5
+        // GET: /Product/Delete/5
  
         public ActionResult Delete(int id)
         {
@@ -90,7 +108,7 @@ namespace Traders_Marketplace.Controllers
         }
 
         //
-        // POST: /User/Delete/5
+        // POST: /Product/Delete/5
 
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
@@ -106,5 +124,8 @@ namespace Traders_Marketplace.Controllers
                 return View();
             }
         }
+
+       
+        
     }
 }

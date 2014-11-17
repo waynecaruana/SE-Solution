@@ -3,4 +3,3 @@ C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\bin\Debug\Common.d
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\bin\Debug\Common.pdb
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\obj\Debug\Common.dll
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\obj\Debug\Common.pdb
-C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
