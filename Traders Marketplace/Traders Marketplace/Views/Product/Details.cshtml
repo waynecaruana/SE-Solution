@@ -1,0 +1,46 @@
+﻿@model Traders_Marketplace.Models.ProductModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ProductModel</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">Desc</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Desc)
+    </div>
+
+    <div class="display-label">ImagePath</div>
+    <div class="display-field">
+        <img alt="" src="@Html.DisplayFor(model => model.ImagePath)" style="width:500px; height:500px;"/>
+    </div>
+
+    <div class="display-label">Stock</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Stock)
+    </div>
+
+    <div class="display-label">Price</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">Seller</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Seller)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

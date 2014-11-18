@@ -116,5 +116,7 @@ namespace BusinessLogic
             return new UsersRepository().GetUserPermissions(email);
         }
 
+       
+
     }
 }

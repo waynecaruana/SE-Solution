@@ -7,6 +7,8 @@ using BusinessLogic;
 using Traders_Marketplace.Models;
 using System.IO;
 using System.Web.UI.WebControls;
+using Common;
+using DataAccess;
 
 namespace Traders_Marketplace.Controllers
 {
@@ -14,10 +16,37 @@ namespace Traders_Marketplace.Controllers
     {
         //
         // GET: /Product/
-
-        public ActionResult Index()
+        public ActionResult Index(ProductModel model)
         {
-            var products = new ProductsBL().GetAllProducts();
+            List<Product> products = new List<Product>();
+
+            User u = new UsersRepository().GetUserByUsername(model.Email);
+            if (u != null)
+            {
+
+                foreach (var item in u.Roles)
+                {
+                    if (item.RoleID == 1)
+                    {
+                        products = new ProductsBL().GetAllProducts().ToList();
+                    }
+                    else if (item.RoleID == 3)
+                    {
+                        products = new ProductsBL().GetSellerProducts(model.Email).ToList();
+                    }
+                    else
+                    {
+                        products = new ProductsBL().GetAllProducts().ToList();
+                    }
+                }
+            }
+            else
+            {
+                products = new ProductsBL().GetAllProducts().ToList();
+            }
+
+           
+            
             return View(products);
         }
 
@@ -26,12 +55,14 @@ namespace Traders_Marketplace.Controllers
 
         public ActionResult Details(int id)
         {
-            return View();
+
+            Product p = new ProductsBL().GetProductByID(id);
+            return View(new ProductModel(p.ID));
         }
 
         //
         // GET: /Product/Create
-
+        [Authorize(Roles = "Add Product")]
         public ActionResult Create()
         {
             return View();
@@ -75,21 +106,41 @@ namespace Traders_Marketplace.Controllers
         
         //
         // GET: /Product/Edit/5
- 
+        [Authorize(Roles = "Edit Product")]
         public ActionResult Edit(int id)
         {
-            return View();
+            Product p = new ProductsBL().GetProductByID(id);
+            return View(new ProductModel(p.ID));
         }
 
         //
         // POST: /Product/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, FormCollection collection, ProductModel model)
         {
             try
             {
+
+                HttpPostedFileBase file = Request.Files[0];
+                byte[] imageSize = new byte[file.ContentLength];
+                file.InputStream.Read(imageSize, 0, (int)file.ContentLength);
+                string image = file.FileName.Split('\\').Last();
+                int size = file.ContentLength;
+
+                if (size > 0)
+                {
+                    file.SaveAs(Server.MapPath("~/Content/images/" + image.ToString()));
+                    //Save image url to database
+                }
+                else
+                {
+                    image = "na.jpg";
+                }
                 // TODO: Add update logic here
+                //Product p = new ProductsBL().GetProductByID(id);
+                //new ProductModel(id);
+                new ProductsBL().UpdateProduct(model.ID, model.Name, model.Desc, "/Content/Images/" + image.ToString(), Convert.ToInt32(model.Stock), Convert.ToDecimal(model.Price), model.Email);
  
                 return RedirectToAction("Index");
             }
@@ -101,10 +152,12 @@ namespace Traders_Marketplace.Controllers
 
         //
         // GET: /Product/Delete/5
- 
+
+        [Authorize(Roles = "Delete Product")]
         public ActionResult Delete(int id)
         {
-            return View();
+            new ProductsBL().DeleteProduct(id);
+            return RedirectToAction("Index","Product");
         }
 
         //
