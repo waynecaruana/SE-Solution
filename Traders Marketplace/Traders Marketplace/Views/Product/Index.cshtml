@@ -27,16 +27,28 @@
         <th>
             Price
         </th>
-        @*<th>
-            DateListed
-        </th>*@
-       @* <th>
-            UserEmail
-        </th>*@
-        <th></th>
+
+         @{
+            if (User.Identity.Name != "")
+            {
+                List<Common.Role> userRoles = new BusinessLogic.UsersBL().GetUserRoles(User.Identity.Name).ToList();
+
+                foreach (Common.Role r in userRoles)
+                {
+                    if (r.Role1 == "Admin" || r.Role1 == "Seller")
+                    {
+                       <th></th>
+                     
+                    }
+                }
+            }
+                        
+        }
+        
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
@@ -52,18 +64,32 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
-       @* </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateListed)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.UserEmail)
-        </td>*@
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
+       </td>
+       
+      
+        @{
+            if (User.Identity.Name != "")
+            {
+                List<Common.Role> userRoles = new BusinessLogic.UsersBL().GetUserRoles(User.Identity.Name).ToList();
+
+                foreach (Common.Role r in userRoles)
+                {
+                    if (r.Role1 == "Admin" || r.Role1 == "Seller")
+                    {
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                     
+                    }
+                }
+            }
+                        
+        }
+           
+        
+    
     </tr>
 }
 

@@ -19,9 +19,30 @@
             <nav>
                 <ul id="menu">
                     <li>@Html.ActionLink("Products", "Index", "Product")</li>
-                    <li>@Html.ActionLink("Users","Index","User")</li>
-                    <li>@Html.ActionLink("Roles","Index","Role")</li>
-                    <li>@Html.ActionLink("Allocate Roles","AllocateRoles","Role")</li>
+
+                    @{
+                        if (User.Identity.Name != "")
+                        {
+                            List<Common.Role> userRoles = new BusinessLogic.UsersBL().GetUserRoles(User.Identity.Name).ToList();
+
+                            foreach (Common.Role r in userRoles)
+                            {
+                                if (r.Role1 == "Admin")
+                                {
+
+                                    <li>@Html.ActionLink("Users", "Index", "User")</li>
+                                    <li>@Html.ActionLink("Roles", "Index", "Role")</li>
+                                    <li>@Html.ActionLink("Allocate Roles", "AllocateRoles", "Role")</li>
+                     
+                                }
+                            }
+                        }
+
+                        
+
+                        
+                    }
+                   
                 </ul>
             </nav>
         </header>

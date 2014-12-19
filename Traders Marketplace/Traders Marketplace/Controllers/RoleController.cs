@@ -21,7 +21,7 @@ namespace Traders_Marketplace.Controllers
             return View(new RolesRepository().GetAllRoles());          
         }
 
-        //[Authorize(Roles = "List Roles")]
+        [Authorize(Roles = "Allocate Roles")]
         public ActionResult AllocateRoles()
         {
             RoleModel roleModel = new RoleModel();
