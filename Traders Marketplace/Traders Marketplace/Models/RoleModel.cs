@@ -42,9 +42,6 @@ namespace Traders_Marketplace.Models
         }
     }
 
-    public class AllocateRoleModel
-    {
-    }
 
     
 }
