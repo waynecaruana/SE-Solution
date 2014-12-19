@@ -38,7 +38,7 @@ namespace Traders_Marketplace.Controllers
                     
                     FormsAuthentication.SetAuthCookie(model.Email,true);
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Product");
                     
                 }
                 else
@@ -58,7 +58,7 @@ namespace Traders_Marketplace.Controllers
         {
             FormsAuthentication.SignOut();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Product");
         }
 
         //

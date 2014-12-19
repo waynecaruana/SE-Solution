@@ -76,11 +76,8 @@ namespace BusinessLogic
                 Role r = ur.GetRoleByID(roleid);//get role by id
 
                 ur.AddUser(u);
-                rr.AllocateRole(u, r);
+                rr.AllocateRole(u, r, "Allocate");
             
-           
-  
-
         }
 
         /// <summary>
@@ -114,6 +111,21 @@ namespace BusinessLogic
         {
 
             return new UsersRepository().GetUserPermissions(email);
+        }
+
+        public void AllocateRole(int roleID, string email, string option)
+        {
+            UsersRepository ur = new UsersRepository();
+            UsersRepository rr = new UsersRepository();
+
+            ur.Entity = rr.Entity;
+
+            //get all user details
+            User u = ur.GetUserByUsername(email);
+            Role r = ur.GetRoleByID(roleID);//get role by id
+
+            rr.AllocateRole(u, r, option);
+
         }
 
        

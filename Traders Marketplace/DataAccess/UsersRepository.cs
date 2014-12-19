@@ -59,11 +59,26 @@ namespace DataAccess
         /// </summary>
         /// <param name="user">user</param>
         /// <param name="role">role of user</param>
-        public void AllocateRole(User user, Role role)
+        public void AllocateRole(User user, Role role, string option)
         {
             //you have to add the role to the list of roles of that user
-            user.Roles.Add(role);
-            Entity.SaveChanges();
+            try
+            {
+                
+                if (option == "Allocate")
+                {
+                    user.Roles.Add(role);
+                }
+                else if (option == "Deallocate")
+                {
+                    user.Roles.Remove(role);
+                }
+                Entity.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                
+            }
         }
 
         /// <summary>

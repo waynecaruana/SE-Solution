@@ -97,6 +97,12 @@ namespace BusinessLogic
             pr.DeleteProduct(product);
         }
 
+
+        /// <summary>
+        /// this method is used to get all products for a seller
+        /// </summary>
+        /// <param name="email">seller email</param>
+        /// <returns>a list of products</returns>
         public IEnumerable<Product> GetSellerProducts(string email)
         {
             return new ProductsRepository().GetSellerProducts(email);
