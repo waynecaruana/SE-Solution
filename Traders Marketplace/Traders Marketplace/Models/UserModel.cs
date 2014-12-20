@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Common;
 using System.ComponentModel.DataAnnotations;
+using BusinessLogic;
 
 namespace Traders_Marketplace.Models
 {
@@ -38,6 +39,23 @@ namespace Traders_Marketplace.Models
         [Required]
         [RegularExpression(@"^[0-9]{8,10}$", ErrorMessage = "Invalid Phone number")]
         public string ContactNo { get; set; }
+
+        public UserModel(string email)
+        {
+            User u = new UsersBL().GetUserByEmail(email);
+
+            Email = u.Email;
+            Firstname = u.Firstname;
+            Lastname = u.Lastname;
+            Password = u.Password;
+            Address = u.Address;
+            ContactNo = u.ContactNo;
+            
+        }
+
+         public UserModel()
+         {
+         }
 
         public TradersMarketplaceDBEntities myUsers { get; set; }
     }

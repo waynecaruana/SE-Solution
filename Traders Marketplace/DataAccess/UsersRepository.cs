@@ -165,6 +165,29 @@ namespace DataAccess
         }
 
 
+        /// <summary>
+        /// this method is used to update a user
+        /// </summary>
+        /// <param name="u">an entity of type user</param>
+        public void UpdateUser(User u)
+        {
+            Entity.Users.Attach(GetUserByUsername(u.Email));
+            Entity.Users.ApplyCurrentValues(u);
+
+            Entity.SaveChanges();
+        }
+
+        /// <summary>
+        /// this method is used to delet a user
+        /// </summary>
+        /// <param name="entry">an entry of type user</param>
+        public void DeleteUser(User entry)
+        {
+
+            Entity.Users.DeleteObject(entry);
+            Entity.SaveChanges();
+
+        }
 
        
 

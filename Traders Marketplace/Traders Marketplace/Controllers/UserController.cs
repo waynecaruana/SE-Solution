@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Common;
+using BusinessLogic;
+using Traders_Marketplace.Models;
 
 namespace Traders_Marketplace.Controllers
 {
@@ -23,15 +25,15 @@ namespace Traders_Marketplace.Controllers
 
         //
         // GET: /User/Details/5
-
-        public ActionResult Details(int id)
+        [Authorize(Roles = "Read Users")]
+        public ActionResult Details(string id)
         {
-            return View();
+            User u = new UsersBL().GetUserByEmail(id);
+            return View(new UserModel(u.Email));
         }
 
         //
         // GET: /User/Create
-
         public ActionResult Create()
         {
             return View();
@@ -57,22 +59,25 @@ namespace Traders_Marketplace.Controllers
         
         //
         // GET: /User/Edit/5
- 
-        public ActionResult Edit(int id)
+        [Authorize(Roles = "Edit User")]
+        public ActionResult Edit(string id)
         {
-            return View();
+            User u = new UsersBL().GetUserByEmail(id);
+            return View(new UserModel(u.Email));
         }
 
         //
         // POST: /User/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(string id, FormCollection collection, UserModel model)
         {
             try
             {
+                User u = new UsersBL().GetUserByEmail(id);
                 // TODO: Add update logic here
- 
+                new UsersBL().UpdateUser(model.Email,model.Password,model.Firstname,model.Lastname,model.Address,Convert.ToInt32(u.TownID), model.ContactNo) ;
+
                 return RedirectToAction("Index");
             }
             catch
@@ -83,9 +88,19 @@ namespace Traders_Marketplace.Controllers
 
         //
         // GET: /User/Delete/5
- 
-        public ActionResult Delete(int id)
+        [Authorize(Roles = "Delete User")]
+        public ActionResult Delete(string id)
         {
+            try
+            {
+                new UsersBL().DeleteUser(id);
+                ViewBag.Msg = "User was Deleted";
+            }
+            catch(Exception)
+            {
+                ViewBag.Msg = "Please Deallocate Roles First";
+
+            }
             return View();
         }
 

@@ -7,9 +7,9 @@
 
 <h2>Index</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
 <table>
     <tr>
         <th>
@@ -21,14 +21,11 @@
         <th>
             Lastname
         </th>
-        <th>
+         <th>
             Address
         </th>
         <th>
-            TownID
-        </th>
-        <th>
-            ContactNo
+            Contact No
         </th>
         <th></th>
     </tr>
@@ -47,9 +44,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Address)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TownID)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.ContactNo)
         </td>

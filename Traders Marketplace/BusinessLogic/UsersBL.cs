@@ -128,6 +128,59 @@ namespace BusinessLogic
 
         }
 
+        /// <summary>
+        /// this method is used to get a user by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public User GetUserByEmail(string email)
+        {
+            return new UsersRepository().GetUserByUsername(email);
+        }
+
+
+        /// <summary>
+        /// this is used to update a user
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <param name="name"></param>
+        /// <param name="surname"></param>
+        /// <param name="address"></param>
+        /// <param name="townid"></param>
+        /// <param name="contact"></param>
+        /// <param name="roleid"></param>
+        public void UpdateUser(string email, string password, string name, string surname, string address,int townid, string contact)
+        {
+            User u = new User();
+            //get all user details
+            u.Email = email;
+            u.Password = password;
+            u.Firstname = name;
+            u.Lastname = surname;
+            u.Address = address;
+            u.ContactNo = contact;
+            u.TownID = townid;
+
+            new UsersRepository().UpdateUser(u);
+        }
+
+
+        /// <summary>
+        /// This method is used to delete a user
+        /// </summary>
+        /// <param name="email"></param>
+        public void DeleteUser(string email)
+        {
+            UsersRepository u = new UsersRepository();
+
+            User user = u.GetUserByUsername(email);//get the user by username
+            
+            u.DeleteUser(user);
+        }
+
+        
+
        
 
     }
