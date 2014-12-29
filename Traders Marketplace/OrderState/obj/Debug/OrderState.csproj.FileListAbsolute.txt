@@ -1,0 +1,4 @@
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\OrderState\bin\Debug\OrderState.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\OrderState\bin\Debug\OrderState.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\OrderState\obj\Debug\OrderState.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\OrderState\obj\Debug\OrderState.pdb

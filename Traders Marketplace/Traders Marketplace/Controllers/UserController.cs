@@ -11,6 +11,12 @@ namespace Traders_Marketplace.Controllers
 {
     public class UserController : Controller
     {
+        public ActionResult Order()
+        {
+            return View();
+        } 
+
+
         //
         // GET: /User
         [Authorize(Roles = "List Users")]

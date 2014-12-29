@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Common.User>
+
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Order Details</h2>
+
+
+    @{OrderState.Order order = new OrderState.Order();}
+      <label>@order.Register()</label>
+      <br /><br />
+      <label> @order.Approve()</label>
+      <br /><br />
+      <label>@order.Dispatch()</label>
+    
+
+
+

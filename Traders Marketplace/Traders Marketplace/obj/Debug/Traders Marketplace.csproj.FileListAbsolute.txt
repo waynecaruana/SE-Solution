@@ -11,3 +11,5 @@ C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\B
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\DataAccess.dll
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\BusinessLogic.pdb
 C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\DataAccess.pdb
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\OrderState.dll
+C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\OrderState.pdb
