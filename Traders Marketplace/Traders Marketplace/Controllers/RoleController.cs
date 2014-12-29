@@ -18,7 +18,8 @@ namespace Traders_Marketplace.Controllers
         [Authorize(Roles = "List Roles")]
         public ActionResult Index(RoleModel model)
         {
-            return View(new RolesRepository().GetAllRoles());          
+            return View(new RolesRepository().GetAllRoles());
+            
         }
 
         [Authorize(Roles = "Allocate Roles")]

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="09b65109-7260-413b-82d4-41c57d970a38" name="Wayne@WAYNE-PC 2014-12-29 13:20:31" runUser="Wayne-PC\Wayne" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="4acf1781-8e7d-46aa-89d9-76db7938f6cc">
+    <Deployment runDeploymentRoot="Wayne_WAYNE-PC 2014-12-29 13_20_31">
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\BusinessLogic.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\bin\Debug\Common.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\Traders Marketplace.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\DataAccess\bin\Debug\DataAccess.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-12-29T13:20:31.4788201+01:00" queuing="2014-12-29T13:20:34.1177425+01:00" start="2014-12-29T13:20:34.2425427+01:00" finish="2014-12-29T13:20:58.5357856+01:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="3" executed="3" passed="2" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="WAYNE-PC" outcome="Error" timestamp="2014-12-29T13:20:58.5357856+01:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateRoles" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="0cc7c17d-bc42-3538-16f7-160aa1cf832d">
+      <Execution id="0c514657-739b-4a19-94c8-d56dcc9c6bec" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateRoles" />
+    </UnitTest>
+    <UnitTest name="DeleteRoles" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="aaac631b-5742-dd44-d92e-31cf8805ebf9">
+      <Execution id="2880676d-1aa7-4d30-903c-569b691b8257" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteRoles" />
+    </UnitTest>
+    <UnitTest name="ListRoles" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="55f450ac-1188-c03c-2973-80be084adc87">
+      <Execution id="a1f18044-6ff7-4446-98c3-32ac3c5bd4fe" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ListRoles" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0cc7c17d-bc42-3538-16f7-160aa1cf832d" executionId="0c514657-739b-4a19-94c8-d56dcc9c6bec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55f450ac-1188-c03c-2973-80be084adc87" executionId="a1f18044-6ff7-4446-98c3-32ac3c5bd4fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aaac631b-5742-dd44-d92e-31cf8805ebf9" executionId="2880676d-1aa7-4d30-903c-569b691b8257" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="0c514657-739b-4a19-94c8-d56dcc9c6bec" testId="0cc7c17d-bc42-3538-16f7-160aa1cf832d" testName="CreateRoles" computerName="WAYNE-PC" duration="00:00:00.5407921" startTime="2014-12-29T13:20:34.3517429+01:00" endTime="2014-12-29T13:20:35.5841450+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c514657-739b-4a19-94c8-d56dcc9c6bec">
+    </UnitTestResult>
+    <UnitTestResult executionId="a1f18044-6ff7-4446-98c3-32ac3c5bd4fe" testId="55f450ac-1188-c03c-2973-80be084adc87" testName="ListRoles" computerName="WAYNE-PC" duration="00:00:00.0041048" startTime="2014-12-29T13:20:35.5997451+01:00" endTime="2014-12-29T13:20:35.6153451+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a1f18044-6ff7-4446-98c3-32ac3c5bd4fe">
+    </UnitTestResult>
+    <UnitTestResult executionId="2880676d-1aa7-4d30-903c-569b691b8257" testId="aaac631b-5742-dd44-d92e-31cf8805ebf9" testName="DeleteRoles" computerName="WAYNE-PC" duration="00:00:22.9204405" startTime="2014-12-29T13:20:35.6153451+01:00" endTime="2014-12-29T13:20:58.5357856+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2880676d-1aa7-4d30-903c-569b691b8257">
+    </UnitTestResult>
+  </Results>
+</TestRun>

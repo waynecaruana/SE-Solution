@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="a52985b3-913b-4e27-bf15-c1b80981f569" name="Wayne@WAYNE-PC 2014-12-29 12:41:06" runUser="Wayne-PC\Wayne" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="af3a66fc-e826-4a27-9cff-cd429882fa59">
+    <Deployment runDeploymentRoot="Wayne_WAYNE-PC 2014-12-29 12_41_06">
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\BusinessLogic.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\bin\Debug\Common.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\Traders Marketplace.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\DataAccess\bin\Debug\DataAccess.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-12-29T12:41:06.4198552+01:00" queuing="2014-12-29T12:41:07.9692625+01:00" start="2014-12-29T12:41:07.9848625+01:00" finish="2014-12-29T12:41:08.2656630+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateRoles" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="0cc7c17d-bc42-3538-16f7-160aa1cf832d">
+      <Execution id="d9ca745b-c363-4afa-bda7-af93dd2facbc" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateRoles" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0cc7c17d-bc42-3538-16f7-160aa1cf832d" executionId="d9ca745b-c363-4afa-bda7-af93dd2facbc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d9ca745b-c363-4afa-bda7-af93dd2facbc" testId="0cc7c17d-bc42-3538-16f7-160aa1cf832d" testName="CreateRoles" computerName="WAYNE-PC" duration="00:00:00.1189322" startTime="2014-12-29T12:41:07.9848625+01:00" endTime="2014-12-29T12:41:08.2500630+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9ca745b-c363-4afa-bda7-af93dd2facbc">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Fail failed. Role was Not Created</Message>
+          <StackTrace>   at Traders_Marketplace.Tests.RolesTest.CreateRoles() in C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\RolesTest.cs:line 64
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
