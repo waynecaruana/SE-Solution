@@ -29,9 +29,26 @@ namespace DataAccess
         /// <param name="entry">an entry of type role</param>
         public void AddRole(Role entry)
         {
+            bool valid = true;
+            if (entry.Role1 == "" || entry.Role1.Length < 3)
+            {
+                valid = false;
+            }
 
-            Entity.AddToRoles(entry);
-            Entity.SaveChanges();
+            foreach (char item in entry.Role1)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    valid = false;
+                }
+
+            }
+
+            if (valid)
+            {
+                Entity.AddToRoles(entry);
+                Entity.SaveChanges();
+            }
 
         }
 
@@ -48,6 +65,17 @@ namespace DataAccess
 
         }
 
+        /// <summary>
+        /// this method return a role with name
+        /// </summary>
+        /// <param name="name">name of role</param>
+        /// <returns>a single role</returns>
+        public Role GetRoleByName(string name)
+        {
+            return Entity.Roles.SingleOrDefault(r => r.Role1 == name);
+
+        }
+
 
         /// <summary>
         /// This allow us to update a particular role
@@ -55,10 +83,28 @@ namespace DataAccess
         /// <param name="r">role entity</param>
         public void UpdateRole(Role r)
         {
-            Entity.Roles.Attach(GetRoleByID(r.RoleID));
-            Entity.Roles.ApplyCurrentValues(r);
+             bool valid = true;
+            if (r.Role1 == "" || r.Role1.Length < 3)
+            {
+                valid = false;
+            }
 
-            Entity.SaveChanges();
+            foreach (char item in r.Role1)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    valid = false;
+                }
+
+            }
+
+            if (valid)
+            {
+                Entity.Roles.Attach(GetRoleByID(r.RoleID));
+                Entity.Roles.ApplyCurrentValues(r);
+
+                Entity.SaveChanges();
+            }
         }
 
 

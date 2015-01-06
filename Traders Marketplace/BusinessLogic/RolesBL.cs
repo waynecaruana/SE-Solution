@@ -28,10 +28,28 @@ namespace BusinessLogic
         /// <param name="roleName">role name</param>
         public void AddRole(string roleName)
         {
-            Role r = new Role();
-            r.Role1 = roleName;
+            bool valid = true;
+            if (roleName == "" || roleName.Length < 3)
+            {
+                valid = false;
+            }
 
-            new RolesRepository().AddRole(r);
+            foreach (char item in roleName)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    valid = false;
+                }
+
+            }
+
+            if(valid)
+            {
+                Role r = new Role();
+                r.Role1 = roleName;
+
+                new RolesRepository().AddRole(r);
+            }
 
         }
 
@@ -44,6 +62,17 @@ namespace BusinessLogic
         public Role GetRoleByID(int id)
         {
             return new RolesRepository().GetRoleByID(id);
+        }
+
+
+        /// <summary>
+        /// This method allows you to get a role by name
+        /// </summary>
+        /// <param name="name">role name</param>
+        /// <returns>a single role</returns>
+        public Role GetRoleByName(string name)
+        {
+            return new RolesRepository().GetRoleByName(name);
         }
 
 
