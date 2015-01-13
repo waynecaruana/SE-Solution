@@ -45,8 +45,8 @@ namespace DataAccess
 
             try
             {
-                if (entry.Role1 == string.Empty) //Changed Code 
-                //if(entry.Role1 != string.Empty) //Original Code
+                //if (entry.Role1 == string.Empty) //Changed Code 
+                if(entry.Role1 != string.Empty) //Original Code
                 {
                     if (valid == true)
                     {
@@ -130,8 +130,8 @@ namespace DataAccess
 
             try
             {
-                if(!valid)//changed code
-                //if (valid) //orginal code
+                //if(!valid)//changed code
+                if (valid) //orginal code
                 {
                     Entity.Roles.Attach(GetRoleByID(r.RoleID));
                     Entity.Roles.ApplyCurrentValues(r);
@@ -156,7 +156,7 @@ namespace DataAccess
         {
 
             Entity.Roles.DeleteObject(entry);
-            //Entity.SaveChanges();
+            Entity.SaveChanges();
 
         }
 
