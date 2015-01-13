@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="cf41ea8b-d0f3-4ff4-907c-1487f44f195c" name="Wayne@WAYNE-PC 2015-01-13 15:10:41" runUser="Wayne-PC\Wayne" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="b1158098-f8ca-4393-93ef-e1dbd3665d7c">
+    <Deployment runDeploymentRoot="Wayne_WAYNE-PC 2015-01-13 15_10_41">
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\BusinessLogic.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\bin\Debug\Common.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\Traders Marketplace.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\DataAccess\bin\Debug\DataAccess.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-01-13T15:10:41.6848093+01:00" queuing="2015-01-13T15:10:43.9849019+01:00" start="2015-01-13T15:10:44.1097021+01:00" finish="2015-01-13T15:11:37.4625023+01:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="WAYNE-PC" outcome="Error" timestamp="2015-01-13T15:11:37.4625023+01:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AddRoleTest6" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="3066ccc4-335d-88fc-d2aa-f90345048216">
+      <Execution id="b7f638ed-207b-432c-a0dc-82d5d4a0d358" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddRoleTest6" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="3066ccc4-335d-88fc-d2aa-f90345048216" executionId="b7f638ed-207b-432c-a0dc-82d5d4a0d358" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="b7f638ed-207b-432c-a0dc-82d5d4a0d358" testId="3066ccc4-335d-88fc-d2aa-f90345048216" testName="AddRoleTest6" computerName="WAYNE-PC" duration="00:00:53.2255946" startTime="2015-01-13T15:10:44.2369077+01:00" endTime="2015-01-13T15:11:37.4625023+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7f638ed-207b-432c-a0dc-82d5d4a0d358">
+    </UnitTestResult>
+  </Results>
+</TestRun>

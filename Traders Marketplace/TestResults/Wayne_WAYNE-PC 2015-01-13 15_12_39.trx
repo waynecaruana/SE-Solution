@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7bc70b11-87c2-4228-9980-24635d4b8908" name="Wayne@WAYNE-PC 2015-01-13 15:12:39" runUser="Wayne-PC\Wayne" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="36608ed3-bdde-4b47-815f-5cc89e1f4278">
+    <Deployment runDeploymentRoot="Wayne_WAYNE-PC 2015-01-13 15_12_39">
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\BusinessLogic.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\bin\Debug\Common.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\Traders Marketplace.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\DataAccess\bin\Debug\DataAccess.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-01-13T15:12:39.9865319+01:00" queuing="2015-01-13T15:12:43.0913382+01:00" start="2015-01-13T15:12:43.2161384+01:00" finish="2015-01-13T15:13:05.3207775+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AddRoleTest6" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="3066ccc4-335d-88fc-d2aa-f90345048216">
+      <Execution id="91e6120a-54bd-47ae-80e9-f514d9e1cb97" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddRoleTest6" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="3066ccc4-335d-88fc-d2aa-f90345048216" executionId="91e6120a-54bd-47ae-80e9-f514d9e1cb97" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="91e6120a-54bd-47ae-80e9-f514d9e1cb97" testId="3066ccc4-335d-88fc-d2aa-f90345048216" testName="AddRoleTest6" computerName="WAYNE-PC" duration="00:00:19.0864207" startTime="2015-01-13T15:12:43.3253386+01:00" endTime="2015-01-13T15:13:03.4487742+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="91e6120a-54bd-47ae-80e9-f514d9e1cb97">
+    </UnitTestResult>
+  </Results>
+</TestRun>

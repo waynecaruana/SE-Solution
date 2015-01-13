@@ -30,25 +30,40 @@ namespace DataAccess
         public void AddRole(Role entry)
         {
             bool valid = true;
-            if (entry.Role1 == "" || entry.Role1.Length < 3)
-            {
-                valid = false;
-            }
+
 
             foreach (char item in entry.Role1)
             {
                 if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
                 {
                     valid = false;
+                    break;
                 }
-
             }
 
-            if (valid)
+            
+
+            try
             {
-                Entity.AddToRoles(entry);
-                Entity.SaveChanges();
+                if (entry.Role1 == string.Empty) //Changed Code 
+                //if(entry.Role1 != string.Empty) //Original Code
+                {
+                    if (valid == true)
+                    {
+                        Entity.AddToRoles(entry);
+                        Entity.SaveChanges();
+                    }
+                    else throw new ArgumentException();
+                 
+                }
+                else throw new ArgumentException();
+                
             }
+            catch
+            {
+                throw new ArgumentException();
+            }
+            //}
 
         }
 
@@ -60,8 +75,19 @@ namespace DataAccess
         /// <returns>a single role entity</returns>
         public Role GetRoleByID(int id)
         {
-
-            return Entity.Roles.SingleOrDefault(r => r.RoleID == id);
+            try
+            {
+                if (id != -1)
+                {
+                    return Entity.Roles.SingleOrDefault(r => r.RoleID == id);
+                }
+                else throw new ArgumentException();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
+    
 
         }
 
@@ -72,7 +98,14 @@ namespace DataAccess
         /// <returns>a single role</returns>
         public Role GetRoleByName(string name)
         {
-            return Entity.Roles.SingleOrDefault(r => r.Role1 == name);
+            try
+            {
+                return Entity.Roles.SingleOrDefault(r => r.Role1 == name);
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
 
         }
 
@@ -83,11 +116,8 @@ namespace DataAccess
         /// <param name="r">role entity</param>
         public void UpdateRole(Role r)
         {
-             bool valid = true;
-            if (r.Role1 == "" || r.Role1.Length < 3)
-            {
-                valid = false;
-            }
+            bool valid = true;
+           
 
             foreach (char item in r.Role1)
             {
@@ -98,13 +128,23 @@ namespace DataAccess
 
             }
 
-            if (valid)
+            try
             {
-                Entity.Roles.Attach(GetRoleByID(r.RoleID));
-                Entity.Roles.ApplyCurrentValues(r);
+                if(!valid)//changed code
+                //if (valid) //orginal code
+                {
+                    Entity.Roles.Attach(GetRoleByID(r.RoleID));
+                    Entity.Roles.ApplyCurrentValues(r);
 
-                Entity.SaveChanges();
+                    Entity.SaveChanges();
+                }
+                else throw new ArgumentException();
             }
+            catch
+            {
+                throw new ArgumentException();
+            }
+            
         }
 
 
@@ -116,7 +156,7 @@ namespace DataAccess
         {
 
             Entity.Roles.DeleteObject(entry);
-            Entity.SaveChanges();
+            //Entity.SaveChanges();
 
         }
 

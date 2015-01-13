@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d361b28b-01fa-4987-b5d3-4de32e71062d" name="Wayne@WAYNE-PC 2015-01-13 15:31:13" runUser="Wayne-PC\Wayne" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="0921d21e-1e84-4d8b-9f57-69eb651f9517">
+    <Deployment runDeploymentRoot="Wayne_WAYNE-PC 2015-01-13 15_31_13">
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\BusinessLogic\bin\Debug\BusinessLogic.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Common\bin\Debug\Common.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace\bin\Traders Marketplace.dll" />
+      <DeploymentItem filename="C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\DataAccess\bin\Debug\DataAccess.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-01-13T15:31:13.0676784+01:00" queuing="2015-01-13T15:31:14.5652810+01:00" start="2015-01-13T15:31:14.5652810+01:00" finish="2015-01-13T15:31:15.0488819+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="18" executed="18" passed="14" error="0" failed="4" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="AddRoleTest3" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="1201ad84-382d-44d0-1ec6-32d4144e1760">
+      <Execution id="fe20ba7b-e399-4041-bbb1-30017d38925c" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddRoleTest3" />
+    </UnitTest>
+    <UnitTest name="DeleteRoleTest1" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="8fd45f5e-65cb-27bc-d561-88c75a4fd117">
+      <Execution id="016b28ef-e857-4058-833b-6c6542a92509" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteRoleTest1" />
+    </UnitTest>
+    <UnitTest name="UpdateRoleTest3" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="0c517cea-1b2c-b3b4-eed6-ef0adee4e641">
+      <Execution id="f7118327-82a0-4815-af1c-8e60b9b20899" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateRoleTest3" />
+    </UnitTest>
+    <UnitTest name="AddRoleTest1" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="6ac98c11-7f26-c092-5eb3-7da2cc561ac2">
+      <Execution id="7575609c-51e4-4739-bd62-1f968afc5855" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddRoleTest1" />
+    </UnitTest>
+    <UnitTest name="UpdateRoleTest4" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="ea4b6f36-8015-2c3a-bc40-5b4bc5bead08">
+      <Execution id="8a99985e-a450-40f5-80fa-4a72a766a359" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateRoleTest4" />
+    </UnitTest>
+    <UnitTest name="AddRoleTest2" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="5c83ec1f-176d-44aa-c3ce-4656ea925732">
+      <Execution id="4315d1ab-f3f7-4cd6-bcaa-adce904ebfbd" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddRoleTest2" />
+    </UnitTest>
+    <UnitTest name="AddRoleTest7" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="37be030d-0767-d74d-0bdb-772f36e51f2d">
+      <Execution id="e0aa65bd-5675-4865-ad60-6d417c748663" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddRoleTest7" />
+    </UnitTest>
+    <UnitTest name="AddRoleTest4" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="b2929c2d-f953-21ba-87f3-4b1425e28c94">
+      <Execution id="62dc60a6-473c-4df8-99df-c21d4e0d1430" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddRoleTest4" />
+    </UnitTest>
+    <UnitTest name="DeleteRoleTest2" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="bffeae59-bfaa-1b04-507e-f4c66f33e549">
+      <Execution id="1af27c43-84db-4906-a67a-2b663dbe08b1" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteRoleTest2" />
+    </UnitTest>
+    <UnitTest name="UpdateRoleTest5" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="28f0b300-43df-df58-20b1-fe498a87ea0c">
+      <Execution id="c6be6956-a08e-4d43-ab08-81e0b1a0fe5e" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateRoleTest5" />
+    </UnitTest>
+    <UnitTest name="UpdateRoleTest6" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="b3d1d811-2c26-7d8b-665b-702049d63015">
+      <Execution id="69d1f96c-04bf-42e4-89c8-d6929eb62fa2" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateRoleTest6" />
+    </UnitTest>
+    <UnitTest name="ReadRoleTest2" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="8209c04f-dcd2-7695-2208-f708cd488df9">
+      <Execution id="5f08fa4b-dd8d-45c9-ae9c-37039f2524c2" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadRoleTest2" />
+    </UnitTest>
+    <UnitTest name="UpdateRoleTest2" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="704cdaac-ac7c-4e94-af5b-3f6b9c432f38">
+      <Execution id="a83e810a-79ed-487b-bb85-6d3f3c9551f6" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateRoleTest2" />
+    </UnitTest>
+    <UnitTest name="UpdateRoleTest1" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="6c049101-2c65-c774-7cc1-38a25667ce78">
+      <Execution id="25b8b911-a470-41eb-b675-f10184ab5091" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateRoleTest1" />
+    </UnitTest>
+    <UnitTest name="ReadRoleTest1" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="cd6796a7-52ee-3c06-e33f-822eb9305e5c">
+      <Execution id="74cebb76-0793-4837-bc09-df7485de69b0" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadRoleTest1" />
+    </UnitTest>
+    <UnitTest name="AddRoleTest5" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="d35d6bab-9284-b0ec-b5d5-bcb0a4f3a010">
+      <Execution id="f84c0e6e-f888-4a96-973c-9f4d5d7746ab" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddRoleTest5" />
+    </UnitTest>
+    <UnitTest name="UpdateRoleTest7" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="e9e4e746-2288-cc2e-1e96-e70127638202">
+      <Execution id="afc12d9e-fa3f-4ee5-9b83-026945216369" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UpdateRoleTest7" />
+    </UnitTest>
+    <UnitTest name="AddRoleTest6" storage="c:\users\wayne\desktop\se-solution\traders marketplace\traders marketplace.tests\bin\debug\traders marketplace.tests.dll" id="3066ccc4-335d-88fc-d2aa-f90345048216">
+      <Execution id="c2a259f2-672f-4852-bdb3-bdafe0fcab8c" />
+      <TestMethod codeBase="C:/Users/Wayne/Desktop/SE-Solution/Traders Marketplace/Traders Marketplace.Tests/bin/Debug/Traders Marketplace.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Traders_Marketplace.Tests.RolesTest, Traders Marketplace.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddRoleTest6" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0c517cea-1b2c-b3b4-eed6-ef0adee4e641" executionId="f7118327-82a0-4815-af1c-8e60b9b20899" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1201ad84-382d-44d0-1ec6-32d4144e1760" executionId="fe20ba7b-e399-4041-bbb1-30017d38925c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="28f0b300-43df-df58-20b1-fe498a87ea0c" executionId="c6be6956-a08e-4d43-ab08-81e0b1a0fe5e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3066ccc4-335d-88fc-d2aa-f90345048216" executionId="c2a259f2-672f-4852-bdb3-bdafe0fcab8c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37be030d-0767-d74d-0bdb-772f36e51f2d" executionId="e0aa65bd-5675-4865-ad60-6d417c748663" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c83ec1f-176d-44aa-c3ce-4656ea925732" executionId="4315d1ab-f3f7-4cd6-bcaa-adce904ebfbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ac98c11-7f26-c092-5eb3-7da2cc561ac2" executionId="7575609c-51e4-4739-bd62-1f968afc5855" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c049101-2c65-c774-7cc1-38a25667ce78" executionId="25b8b911-a470-41eb-b675-f10184ab5091" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="704cdaac-ac7c-4e94-af5b-3f6b9c432f38" executionId="a83e810a-79ed-487b-bb85-6d3f3c9551f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8209c04f-dcd2-7695-2208-f708cd488df9" executionId="5f08fa4b-dd8d-45c9-ae9c-37039f2524c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8fd45f5e-65cb-27bc-d561-88c75a4fd117" executionId="016b28ef-e857-4058-833b-6c6542a92509" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2929c2d-f953-21ba-87f3-4b1425e28c94" executionId="62dc60a6-473c-4df8-99df-c21d4e0d1430" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3d1d811-2c26-7d8b-665b-702049d63015" executionId="69d1f96c-04bf-42e4-89c8-d6929eb62fa2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bffeae59-bfaa-1b04-507e-f4c66f33e549" executionId="1af27c43-84db-4906-a67a-2b663dbe08b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd6796a7-52ee-3c06-e33f-822eb9305e5c" executionId="74cebb76-0793-4837-bc09-df7485de69b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d35d6bab-9284-b0ec-b5d5-bcb0a4f3a010" executionId="f84c0e6e-f888-4a96-973c-9f4d5d7746ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e9e4e746-2288-cc2e-1e96-e70127638202" executionId="afc12d9e-fa3f-4ee5-9b83-026945216369" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea4b6f36-8015-2c3a-bc40-5b4bc5bead08" executionId="8a99985e-a450-40f5-80fa-4a72a766a359" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f7118327-82a0-4815-af1c-8e60b9b20899" testId="0c517cea-1b2c-b3b4-eed6-ef0adee4e641" testName="UpdateRoleTest3" computerName="WAYNE-PC" duration="00:00:00.1295122" startTime="2015-01-13T15:31:14.5652810+01:00" endTime="2015-01-13T15:31:14.8772816+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7118327-82a0-4815-af1c-8e60b9b20899">
+    </UnitTestResult>
+    <UnitTestResult executionId="fe20ba7b-e399-4041-bbb1-30017d38925c" testId="1201ad84-382d-44d0-1ec6-32d4144e1760" testName="AddRoleTest3" computerName="WAYNE-PC" duration="00:00:00.0045506" startTime="2015-01-13T15:31:14.8772816+01:00" endTime="2015-01-13T15:31:14.8772816+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe20ba7b-e399-4041-bbb1-30017d38925c">
+    </UnitTestResult>
+    <UnitTestResult executionId="c6be6956-a08e-4d43-ab08-81e0b1a0fe5e" testId="28f0b300-43df-df58-20b1-fe498a87ea0c" testName="UpdateRoleTest5" computerName="WAYNE-PC" duration="00:00:00.0037456" startTime="2015-01-13T15:31:14.8772816+01:00" endTime="2015-01-13T15:31:14.8928816+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6be6956-a08e-4d43-ab08-81e0b1a0fe5e">
+    </UnitTestResult>
+    <UnitTestResult executionId="c2a259f2-672f-4852-bdb3-bdafe0fcab8c" testId="3066ccc4-335d-88fc-d2aa-f90345048216" testName="AddRoleTest6" computerName="WAYNE-PC" duration="00:00:00.0024968" startTime="2015-01-13T15:31:14.8928816+01:00" endTime="2015-01-13T15:31:14.8928816+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2a259f2-672f-4852-bdb3-bdafe0fcab8c">
+    </UnitTestResult>
+    <UnitTestResult executionId="e0aa65bd-5675-4865-ad60-6d417c748663" testId="37be030d-0767-d74d-0bdb-772f36e51f2d" testName="AddRoleTest7" computerName="WAYNE-PC" duration="00:00:00.0267391" startTime="2015-01-13T15:31:14.8928816+01:00" endTime="2015-01-13T15:31:14.9240816+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e0aa65bd-5675-4865-ad60-6d417c748663">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Fail failed. Role was Added</Message>
+          <StackTrace>   at Traders_Marketplace.Tests.RolesTest.AddRoleTest7() in C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\RolesTest.cs:line 268
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4315d1ab-f3f7-4cd6-bcaa-adce904ebfbd" testId="5c83ec1f-176d-44aa-c3ce-4656ea925732" testName="AddRoleTest2" computerName="WAYNE-PC" duration="00:00:00.0051061" startTime="2015-01-13T15:31:14.9240816+01:00" endTime="2015-01-13T15:31:14.9396817+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4315d1ab-f3f7-4cd6-bcaa-adce904ebfbd">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Traders_Marketplace.Tests.RolesTest.AddRoleTest2 threw exception: 
+System.ArgumentException: Value does not fall within the expected range.</Message>
+          <StackTrace>    at DataAccess.RolesRepository.AddRole(Role entry) in C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\DataAccess\RolesRepository.cs:line 64
+   at Traders_Marketplace.Tests.RolesTest.AddRoleTest2() in C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\RolesTest.cs:line 89
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7575609c-51e4-4739-bd62-1f968afc5855" testId="6ac98c11-7f26-c092-5eb3-7da2cc561ac2" testName="AddRoleTest1" computerName="WAYNE-PC" duration="00:00:00.0039024" startTime="2015-01-13T15:31:14.9396817+01:00" endTime="2015-01-13T15:31:14.9396817+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7575609c-51e4-4739-bd62-1f968afc5855">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Traders_Marketplace.Tests.RolesTest.AddRoleTest1 threw exception: 
+System.ArgumentException: Value does not fall within the expected range.</Message>
+          <StackTrace>    at DataAccess.RolesRepository.AddRole(Role entry) in C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\DataAccess\RolesRepository.cs:line 64
+   at Traders_Marketplace.Tests.RolesTest.AddRoleTest1() in C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\RolesTest.cs:line 50
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="25b8b911-a470-41eb-b675-f10184ab5091" testId="6c049101-2c65-c774-7cc1-38a25667ce78" testName="UpdateRoleTest1" computerName="WAYNE-PC" duration="00:00:00.0025965" startTime="2015-01-13T15:31:14.9396817+01:00" endTime="2015-01-13T15:31:14.9396817+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="25b8b911-a470-41eb-b675-f10184ab5091">
+    </UnitTestResult>
+    <UnitTestResult executionId="a83e810a-79ed-487b-bb85-6d3f3c9551f6" testId="704cdaac-ac7c-4e94-af5b-3f6b9c432f38" testName="UpdateRoleTest2" computerName="WAYNE-PC" duration="00:00:00.0027065" startTime="2015-01-13T15:31:14.9552817+01:00" endTime="2015-01-13T15:31:14.9552817+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a83e810a-79ed-487b-bb85-6d3f3c9551f6">
+    </UnitTestResult>
+    <UnitTestResult executionId="5f08fa4b-dd8d-45c9-ae9c-37039f2524c2" testId="8209c04f-dcd2-7695-2208-f708cd488df9" testName="ReadRoleTest2" computerName="WAYNE-PC" duration="00:00:00.0038966" startTime="2015-01-13T15:31:14.9552817+01:00" endTime="2015-01-13T15:31:14.9552817+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f08fa4b-dd8d-45c9-ae9c-37039f2524c2">
+    </UnitTestResult>
+    <UnitTestResult executionId="016b28ef-e857-4058-833b-6c6542a92509" testId="8fd45f5e-65cb-27bc-d561-88c75a4fd117" testName="DeleteRoleTest1" computerName="WAYNE-PC" duration="00:00:00.0035982" startTime="2015-01-13T15:31:14.9552817+01:00" endTime="2015-01-13T15:31:14.9708817+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="016b28ef-e857-4058-833b-6c6542a92509">
+    </UnitTestResult>
+    <UnitTestResult executionId="62dc60a6-473c-4df8-99df-c21d4e0d1430" testId="b2929c2d-f953-21ba-87f3-4b1425e28c94" testName="AddRoleTest4" computerName="WAYNE-PC" duration="00:00:00.0028125" startTime="2015-01-13T15:31:14.9708817+01:00" endTime="2015-01-13T15:31:14.9708817+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="62dc60a6-473c-4df8-99df-c21d4e0d1430">
+    </UnitTestResult>
+    <UnitTestResult executionId="69d1f96c-04bf-42e4-89c8-d6929eb62fa2" testId="b3d1d811-2c26-7d8b-665b-702049d63015" testName="UpdateRoleTest6" computerName="WAYNE-PC" duration="00:00:00.0035473" startTime="2015-01-13T15:31:14.9708817+01:00" endTime="2015-01-13T15:31:14.9864818+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69d1f96c-04bf-42e4-89c8-d6929eb62fa2">
+    </UnitTestResult>
+    <UnitTestResult executionId="1af27c43-84db-4906-a67a-2b663dbe08b1" testId="bffeae59-bfaa-1b04-507e-f4c66f33e549" testName="DeleteRoleTest2" computerName="WAYNE-PC" duration="00:00:00.0027398" startTime="2015-01-13T15:31:14.9864818+01:00" endTime="2015-01-13T15:31:14.9864818+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1af27c43-84db-4906-a67a-2b663dbe08b1">
+    </UnitTestResult>
+    <UnitTestResult executionId="74cebb76-0793-4837-bc09-df7485de69b0" testId="cd6796a7-52ee-3c06-e33f-822eb9305e5c" testName="ReadRoleTest1" computerName="WAYNE-PC" duration="00:00:00.0039213" startTime="2015-01-13T15:31:14.9864818+01:00" endTime="2015-01-13T15:31:15.0020818+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74cebb76-0793-4837-bc09-df7485de69b0">
+    </UnitTestResult>
+    <UnitTestResult executionId="f84c0e6e-f888-4a96-973c-9f4d5d7746ab" testId="d35d6bab-9284-b0ec-b5d5-bcb0a4f3a010" testName="AddRoleTest5" computerName="WAYNE-PC" duration="00:00:00.0046487" startTime="2015-01-13T15:31:15.0020818+01:00" endTime="2015-01-13T15:31:15.0020818+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f84c0e6e-f888-4a96-973c-9f4d5d7746ab">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Fail failed. Role was Added</Message>
+          <StackTrace>   at Traders_Marketplace.Tests.RolesTest.AddRoleTest5() in C:\Users\Wayne\Desktop\SE-Solution\Traders Marketplace\Traders Marketplace.Tests\RolesTest.cs:line 201
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="afc12d9e-fa3f-4ee5-9b83-026945216369" testId="e9e4e746-2288-cc2e-1e96-e70127638202" testName="UpdateRoleTest7" computerName="WAYNE-PC" duration="00:00:00.0032603" startTime="2015-01-13T15:31:15.0020818+01:00" endTime="2015-01-13T15:31:15.0176818+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="afc12d9e-fa3f-4ee5-9b83-026945216369">
+    </UnitTestResult>
+    <UnitTestResult executionId="8a99985e-a450-40f5-80fa-4a72a766a359" testId="ea4b6f36-8015-2c3a-bc40-5b4bc5bead08" testName="UpdateRoleTest4" computerName="WAYNE-PC" duration="00:00:00.0032575" startTime="2015-01-13T15:31:15.0176818+01:00" endTime="2015-01-13T15:31:15.0176818+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8a99985e-a450-40f5-80fa-4a72a766a359">
+    </UnitTestResult>
+  </Results>
+</TestRun>
