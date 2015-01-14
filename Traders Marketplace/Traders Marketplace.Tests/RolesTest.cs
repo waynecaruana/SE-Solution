@@ -646,7 +646,480 @@ namespace Traders_Marketplace.Tests
 
         }
 
+        /// <summary>
+        /// Add role - Independant path 1 -	1, 2, 3, 4, 5, 6, 3, 7, 8, 9, 10
+        /// </summary>
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void AddRole_IndependentPath1()
+        {
+            //1. read role name *
+            //2. set valid = true *
+            //3. foreach char in role name *
+            //4.    if char is a number *
+            //5.        set valid to false *
+            //6.    end if *
+            //7. end loop *
+            //8. if role name is not null and valid *
+            //9.    Add role to db *
+            //10. end if *
 
+            string roleName = "TestIP123";
+            bool valid = true;
+
+            foreach (char item in roleName)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    valid = false;
+                }
+
+            }
+
+            try
+            {
+                //if(!valid)//changed code
+                if (valid) //orginal code
+                {
+                    Role role = new Role();
+                    role.Role1 = roleName;
+                    r.AddRole(role);
+                }
+                else throw new ArgumentException();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
+        }
+
+        /// <summary>
+        /// Add role - Independant path 2 -	1, 2, 3, 4, 5, 6, 3, 7, 8, 10
+        /// </summary>
+        [TestMethod]
+        //[ExpectedException(typeof(ArgumentException))]
+        public void AddRole_IndependentPath2()
+        {
+            //1. read role name *
+            //2. set valid = true *
+            //3. foreach char in role name *
+            //4.    if char is a number *
+            //5.        set valid to false *
+            //6.    end if *
+            //7. end loop *
+            //8. if role name is not null and valid *
+            //9.    Add role to db -
+            //10. end if *
+
+            string roleName = "TestIP";
+            bool valid = true;
+
+            foreach (char item in roleName)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    valid = false;
+                }
+
+            }
+
+            try
+            {
+                if (valid) //orginal code
+                {
+                    Role role = new Role();
+                    role.Role1 = roleName;
+                   // r.AddRole(role);
+                }
+                else throw new ArgumentException();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
+        }
+
+        /// <summary>
+        /// Add role - Independant path 3 -	1, 2, 3, 4, 6, 3, 7, 8, 9, 10
+        /// </summary>
+        [TestMethod]
+        public void AddRole_IndependentPath3()
+        {
+            //1. read role name *
+            //2. set valid = true *
+            //3. foreach char in role name *
+            //4.    if char is a number *
+            //5.        set valid to false -
+            //6.    end if *
+            //7. end loop *
+            //8. if role name is not null and valid *
+            //9.    Add role to db *
+            //10. end if *
+
+            string roleName = "TestIP";
+            bool valid = true;
+
+            foreach (char item in roleName)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    //valid = false;
+                }
+
+            }
+
+            try
+            {
+                if (valid) //orginal code
+                {
+                    Role role = new Role();
+                    role.Role1 = roleName;
+                    r.AddRole(role);
+                }
+                else throw new ArgumentException();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
+        }
+
+        /// <summary>
+        /// Add role - Independant path 4 -	1, 2, 3, 4, 6, 3, 7, 8, 10
+        /// </summary>
+        [TestMethod]
+        public void AddRole_IndependentPath4()
+        {
+            //1. read role name *
+            //2. set valid = true *
+            //3. foreach char in role name *
+            //4.    if char is a number *
+            //5.        set valid to false -
+            //6.    end if *
+            //7. end loop *
+            //8. if role name is not null and valid *
+            //9.    Add role to db -
+            //10. end if *
+
+            string roleName = "TestIP";
+            bool valid = true;
+
+            foreach (char item in roleName)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    //valid = false;
+                }
+
+            }
+
+            try
+            {
+                if (valid) //orginal code
+                {
+                    Role role = new Role();
+                    role.Role1 = roleName;
+                    //r.AddRole(role);
+                }
+                else throw new ArgumentException();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
+        }
+
+        /// <summary>
+        /// Delete role - Independant path 1 -	1, 2, 3, 6
+        /// </summary>
+        [TestMethod]
+        public void DeleteRole_IndependentPath1()
+        {
+            //1. read role id *
+            //2. if role exist *
+            //3. delete role *
+            //4. else 
+            //5. throw exception
+            //6. end*
+
+
+            Role role = new Role();
+            role = r.GetRoleByID(108);
+
+            if (role != null)
+            {
+                r.DeleteRole(role);
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+           
+        }
+
+        /// <summary>
+        /// Delete role - Independant path 1 -	1, 2, 5, 6
+        /// </summary>
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void DeleteRole_IndependentPath2()
+        {
+            //1. read role id *
+            //2. if role exist *
+            //3. delete role *
+            //4. else 
+            //5. throw exception*
+            //6. end*
+
+
+            Role role = new Role();
+            role = r.GetRoleByID(-1);
+
+            if (role != null)
+            {
+                r.DeleteRole(role);
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+
+        }
+
+        /// <summary>
+        /// Read role - Independant path 1 -	1, 2, 3, 6
+        /// </summary>
+        [TestMethod]
+        public void ReadRole_IndependentPath1()
+        {
+            //1. read role id *
+            //2. if role exist *
+            //3. update role *
+            //4. else 
+            //5. throw exception
+            //6. end*
+
+
+            Role role = new Role();
+            role = r.GetRoleByID(108);
+
+            if (role == null)
+            {
+                throw new ArgumentException();
+            }
+
+        }
+
+        /// <summary>
+        /// Read role - Independant path 1 -	1, 2, 5, 6
+        /// </summary>
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ReadRole_IndependentPath2()
+        {
+            //1. read role id *
+            //2. if role exist *
+            //3. update role *
+            //4. else 
+            //5. throw exception*
+            //6. end*
+
+
+            Role role = new Role();
+            role = r.GetRoleByID(-1);
+
+            if (role == null)
+            {
+                throw new ArgumentException();
+            }
+
+        }
+
+        /// <summary>
+        /// Update role - Independant path 1 -	1, 2, 3, 4, 5, 6, 3, 7, 8, 9, 10
+        /// </summary>
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void UpdateRole_IndependentPath1()
+        {
+            //1. read role name *
+            //2. set valid = true *
+            //3. foreach char in role name *
+            //4.    if char is a number *
+            //5.        set valid to false *
+            //6.    end if *
+            //7. end loop *
+            //8. if role name is not null and valid *
+            //9.    update role to db *
+            //10. end if *
+
+            string roleName = "TestIP";
+            bool valid = true;
+
+            foreach (char item in roleName)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    valid = false;
+                }
+
+            }
+
+            try
+            {
+                //if(!valid)//changed code
+                if (valid) //orginal code
+                {
+                    Role role = new Role();
+                    role.Role1 = roleName;
+                    r.UpdateRole(role);
+                }
+                else throw new ArgumentException();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
+        }
+
+
+        /// <summary>
+        /// Update role - Independant path 2 -	1, 2, 3, 4, 5, 6, 3, 7, 8, 10
+        /// </summary>
+        [TestMethod]
+        public void UpdateRole_IndependentPath2()
+        {
+            //1. read role name *
+            //2. set valid = true *
+            //3. foreach char in role name *
+            //4.    if char is a number *
+            //5.        set valid to false *
+            //6.    end if *
+            //7. end loop *
+            //8. if role name is not null and valid *
+            //9.    update role to db -
+            //10. end if *
+
+            string roleName = "TestIP";
+            bool valid = true;
+
+            foreach (char item in roleName)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    valid = false;
+                }
+
+            }
+
+            try
+            {
+                if (valid) //orginal code
+                {
+                    Role role = new Role();
+                    role.Role1 = roleName;
+                    // r.UpdateRole(role);
+                }
+                else throw new ArgumentException();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
+        }
+
+        /// <summary>
+        /// Update role - Independant path 3 -	1, 2, 3, 4, 6, 3, 7, 8, 9, 10
+        /// </summary>
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void UpdateRole_IndependentPath3()
+        {
+            //1. read role name *
+            //2. set valid = true *
+            //3. foreach char in role name *
+            //4.    if char is a number *
+            //5.        set valid to false -
+            //6.    end if *
+            //7. end loop *
+            //8. if role name is not null and valid *
+            //9.    update role to db *
+            //10. end if *
+
+            string roleName = "TestIP";
+            bool valid = true;
+
+            foreach (char item in roleName)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    //valid = false;
+                }
+
+            }
+
+            try
+            {
+                if (valid) //orginal code
+                {
+                    Role role = new Role();
+                    role.Role1 = roleName;
+                    r.UpdateRole(role);
+                }
+                else throw new ArgumentException();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
+        }
+
+        /// <summary>
+        /// Update role - Independant path 4 -	1, 2, 3, 4, 6, 3, 7, 8, 10
+        /// </summary>
+        [TestMethod]
+        public void UpdateRole_IndependentPath4()
+        {
+            //1. read role name *
+            //2. set valid = true *
+            //3. foreach char in role name *
+            //4.    if char is a number *
+            //5.        set valid to false -
+            //6.    end if *
+            //7. end loop *
+            //8. if role name is not null and valid *
+            //9.    update role to db -
+            //10. end if *
+
+            string roleName = "TestIP";
+            bool valid = true;
+
+            foreach (char item in roleName)
+            {
+                if (item == '0' || item == '1' || item == '2' || item == '3' || item == '4' || item == '5' || item == '6' || item == '7' || item == '8' || item == '9')
+                {
+                    //valid = false;
+                }
+
+            }
+
+            try
+            {
+                if (valid) //orginal code
+                {
+                    Role role = new Role();
+                    role.Role1 = roleName;
+                    //r.UpdateRole(role);
+                }
+                else throw new ArgumentException();
+            }
+            catch
+            {
+                throw new ArgumentException();
+            }
+        }
+
+      
         [TestCleanup]
         public void CleanUp()
         {
